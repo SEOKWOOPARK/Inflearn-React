@@ -1,0 +1,38 @@
+import React, {useState} from 'react';
+
+export default function App(){
+	return <SelectFruit />
+}
+
+function SelectFruit( {selectedFruit, onChange}){
+	const [fruits, setFruits] = useState( ['apple', 'banana', 'orange']);
+	const [newFruit, setNewFruit] = useState('');
+
+	function addNewFruit(){
+    // fruits.push(newFruit); 아래처럼 불변객체로 관리하자
+    // setFruits(fruits);
+
+		setFruits([...fruits, newFruit]);
+		setNewFruit(''); 
+	}
+	
+	return (
+		<div>
+			<Select  
+			options={fruits}
+			selected={selectedFruit} onChange={onChange} />
+			<input 
+			type="text" value={newFruit} onChange={e => setNewFruit(e.target.value)}/>
+			<button onClick={addNewFruit}>추가하기</button>
+		</div>
+		
+	);
+} 
+
+const Select = React.memo( ({options}) => (
+	<div>
+		{options.map(item => (
+			<p>{item}</p>
+		))}
+	</div>
+))
