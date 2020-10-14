@@ -1,4 +1,4 @@
-인프런 이재승님의 리액트, 리덕스 요약
+인프런 이재승님의 리액트, 리덕스 강좌 정리 및 요약
 ------------------------------------------------------------------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
