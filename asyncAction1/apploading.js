@@ -12,6 +12,5 @@ export default function App() {
         <TimelineMain />
       </div>
     </Provider>
-  ); // Provider => 리액트 액션을 받아서 이벤트를 하위컴포넌트에 전달
-  //FriendMain 컴포넌트 수정
+  );
 }
