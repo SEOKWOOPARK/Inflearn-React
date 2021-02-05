@@ -20,9 +20,9 @@ export function* trySetText(action) {
   yield put(actions.setCalue('text', action.text));
 }
 
-export default function* () {
-  yield all([takeLeading(types.REQUEST_LIKE, fetchData)]);
-}
+// export default function* () {
+//   yield all([takeLeading(types.REQUEST_LIKE, fetchData)]);
+// }
 
 export default function* () {
   yield all([
